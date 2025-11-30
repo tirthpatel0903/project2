@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy - Food & Grocery Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-utensils"></i>
+                Swiggy
+            </a>
+            <div class="nav-links">
+                <a href="#">Swiggy Corporate</a>
+                <a href="#">Partner with us</a>
+                <a href="#">Get the App</a>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div class="location" id="location-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="location-text">Enter your delivery location</span>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Order food & groceries. Discover best restaurants. Swiggy it!</h1>
+            <p>Enter your delivery location</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search for restaurant, item or more">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');"></div>
+                <div class="service-content">
+                    <h3>FOOD DELIVERY FROM RESTAURANTS</h3>
+                    <p>Order from your favorite restaurants</p>
+                    <span class="discount">UPTO 60% OFF</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');"></div>
+                <div class="service-content">
+                    <h3>INSTAMART INSTANT GROCERY</h3>
+                    <p>Get groceries delivered in minutes</p>
+                    <span class="discount">UPTO 60% OFF</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');"></div>
+                <div class="service-content">
+                    <h3>DINEOUT EAT OUT & SAVE MORE</h3>
+                    <p>Discover best restaurants for dining out</p>
+                    <span class="discount">UPTO 50% OFF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Categories -->
+    <section class="food-categories">
+        <h2 class="section-title">Order our best food options</h2>
+        <div class="categories-grid">
+            <div class="category-card" data-category="pizza">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Pizza</p>
+            </div>
+            <div class="category-card" data-category="burger">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Burger</p>
+            </div>
+            <div class="category-card" data-category="biryani">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Biryani</p>
+            </div>
+            <div class="category-card" data-category="north-indian">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>North Indian</p>
+            </div>
+            <div class="category-card" data-category="south-indian">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>South Indian</p>
+            </div>
+            <div class="category-card" data-category="chinese">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Chinese</p>
+            </div>
+            <div class="category-card" data-category="desserts">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Desserts</p>
+            </div>
+            <div class="category-card" data-category="gym-food">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>GYM Food</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Pages -->
+    <section class="category-page" id="pizza-page">
+        <button class="back-button" id="back-button-pizza">
+            <i class="fas fa-arrow-left"></i> Back to Categories
+        </button>
+        <h2 class="section-title">Pizza Menu</h2>
+        <div class="food-items-grid">
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">Bestseller</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Margherita Pizza</h3>
+                    <p class="food-item-description">Classic delight with 100% real mozzarella cheese</p>
+                    <p class="food-item-price">₹299</p>
+                    <button class="add-to-cart-btn" data-id="1" data-name="Margherita Pizza" data-price="299" data-image="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">Bestseller</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Pepperoni Pizza</h3>
+                    <p class="food-item-description">Spicy pepperoni with extra cheese</p>
+                    <p class="food-item-price">₹399</p>
+                    <button class="add-to-cart-btn" data-id="2" data-name="Pepperoni Pizza" data-price="399" data-image="https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">Popular</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Veggie Supreme</h3>
+                    <p class="food-item-description">Black olives, capsicum, onion, grilled mushroom, corn</p>
+                    <p class="food-item-price">₹449</p>
+                    <button class="add-to-cart-btn" data-id="3" data-name="Veggie Supreme" data-price="449" data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">New</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Chicken Supreme</h3>
+                    <p class="food-item-description">Chicken sausage, chicken meatballs, grilled chicken rashers</p>
+                    <p class="food-item-price">₹499</p>
+                    <button class="add-to-cart-btn" data-id="4" data-name="Chicken Supreme" data-price="499" data-image="https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-page" id="burger-page">
+        <button class="back-button" id="back-button-burger">
+            <i class="fas fa-arrow-left"></i> Back to Categories
+        </button>
+        <h2 class="section-title">Burger Menu</h2>
+        <div class="food-items-grid">
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">Bestseller</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Classic Veg Burger</h3>
+                    <p class="food-item-description">Crispy veg patty with fresh veggies and sauces</p>
+                    <p class="food-item-price">₹129</p>
+                    <button class="add-to-cart-btn" data-id="5" data-name="Classic Veg Burger" data-price="129" data-image="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1606755962773-d324e383242b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">Popular</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Chicken Burger</h3>
+                    <p class="food-item-description">Juicy grilled chicken patty with special sauce</p>
+                    <p class="food-item-price">₹199</p>
+                    <button class="add-to-cart-btn" data-id="6" data-name="Chicken Burger" data-price="199" data-image="https://images.unsplash.com/photo-1606755962773-d324e383242b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1549611016-3a70d82b5040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">Cheesy</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Cheese Burger</h3>
+                    <p class="food-item-description">Double cheese with crispy patty and fresh lettuce</p>
+                    <p class="food-item-price">₹179</p>
+                    <button class="add-to-cart-btn" data-id="7" data-name="Cheese Burger" data-price="179" data-image="https://images.unsplash.com/photo-1549611016-3a70d82b5040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gym Food Page -->
+    <section class="category-page" id="gym-food-page">
+        <button class="back-button" id="back-button-gym-food">
+            <i class="fas fa-arrow-left"></i> Back to Categories
+        </button>
+        <h2 class="section-title">GYM Food - Nutrition Plans</h2>
+        <div class="food-items-grid">
+            <!-- High Protein Breakfast -->
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">High Protein</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Oats + Milk</h3>
+                    <p class="food-item-description">Healthy breakfast with high protein content</p>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <div class="value">12g</div>
+                            <div class="label">Protein</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">40g</div>
+                            <div class="label">Carbs</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">7g</div>
+                            <div class="label">Fat</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">280</div>
+                            <div class="label">Calories</div>
+                        </div>
+                    </div>
+                    <p class="food-item-price">₹120</p>
+                    <button class="add-to-cart-btn" data-id="8" data-name="Oats + Milk" data-price="120" data-image="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">High Protein</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Paneer Paratha (1)</h3>
+                    <p class="food-item-description">Protein-rich Indian flatbread with cottage cheese</p>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <div class="value">10g</div>
+                            <div class="label">Protein</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">35g</div>
+                            <div class="label">Carbs</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">12g</div>
+                            <div class="label">Fat</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">320</div>
+                            <div class="label">Calories</div>
+                        </div>
+                    </div>
+                    <p class="food-item-price">₹80</p>
+                    <button class="add-to-cart-btn" data-id="9" data-name="Paneer Paratha" data-price="80" data-image="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">High Protein</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Sprouts Bowl (100g)</h3>
+                    <p class="food-item-description">Nutrient-rich sprouts for muscle building</p>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <div class="value">10g</div>
+                            <div class="label">Protein</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">18g</div>
+                            <div class="label">Carbs</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">1g</div>
+                            <div class="label">Fat</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">120</div>
+                            <div class="label">Calories</div>
+                        </div>
+                    </div>
+                    <p class="food-item-price">₹60</p>
+                    <button class="add-to-cart-btn" data-id="10" data-name="Sprouts Bowl" data-price="60" data-image="https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1587015566802-5dc157c9017d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">High Protein</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Boiled Eggs (2)</h3>
+                    <p class="food-item-description">Perfect protein source for muscle recovery</p>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <div class="value">12g</div>
+                            <div class="label">Protein</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">1g</div>
+                            <div class="label">Carbs</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">10g</div>
+                            <div class="label">Fat</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">140</div>
+                            <div class="label">Calories</div>
+                        </div>
+                    </div>
+                    <p class="food-item-price">₹40</p>
+                    <button class="add-to-cart-btn" data-id="11" data-name="Boiled Eggs (2)" data-price="40" data-image="https://images.unsplash.com/photo-1587015566802-5dc157c9017d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">Post Workout</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Whey Protein Shake</h3>
+                    <p class="food-item-description">Fast absorbing protein for muscle recovery</p>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <div class="value">24g</div>
+                            <div class="label">Protein</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">4g</div>
+                            <div class="label">Carbs</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">2g</div>
+                            <div class="label">Fat</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">130</div>
+                            <div class="label">Calories</div>
+                        </div>
+                    </div>
+                    <p class="food-item-price">₹180</p>
+                    <button class="add-to-cart-btn" data-id="12" data-name="Whey Protein Shake" data-price="180" data-image="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-item-card">
+                <div class="food-item-image" style="background-image: url('https://images.unsplash.com/photo-1606755962773-d324e383242b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+                    <span class="food-item-badge">Lean Protein</span>
+                </div>
+                <div class="food-item-content">
+                    <h3 class="food-item-name">Grilled Chicken (200g)</h3>
+                    <p class="food-item-description">Lean protein source with minimal fat</p>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <div class="value">40g</div>
+                            <div class="label">Protein</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">0g</div>
+                            <div class="label">Carbs</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">5g</div>
+                            <div class="label">Fat</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="value">220</div>
+                            <div class="label">Calories</div>
+                        </div>
+                    </div>
+                    <p class="food-item-price">₹250</p>
+                    <button class="add-to-cart-btn" data-id="13" data-name="Grilled Chicken" data-price="250" data-image="https://images.unsplash.com/photo-1606755962773-d324e383242b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Section -->
+    <section class="restaurants">
+        <h2 class="section-title">Discover best restaurants on Dineout</h2>
+        <div class="restaurants-grid">
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');">
+                    <span class="new-badge">1 new</span>
+                    <span class="rating">4.2 ★</span>
+                </div>
+                <div class="restaurant-content">
+                    <h3 class="restaurant-name">Cafe Maangi</h3>
+                    <p class="restaurant-cuisine">Fast Food + Italian</p>
+                    <p class="restaurant-location">Chandran Complex, Navarangpara...</p>
+                    <div class="restaurant-details">
+                        <span>Table booking</span>
+                        <span>₹7800 for two</span>
+                        <span>3.2 km</span>
+                    </div>
+                    <p class="restaurant-offers">Up to 10% off with bank offers</p>
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');">
+                    <span class="new-badge">1 new</span>
+                    <span class="rating">4.5 ★</span>
+                </div>
+                <div class="restaurant-content">
+                    <h3 class="restaurant-name">Upper Crust</h3>
+                    <p class="restaurant-cuisine">Continental + North Indian</p>
+                    <p class="restaurant-location">Aerabi Complex, Navarangpara, Ahmedabad</p>
+                    <div class="restaurant-details">
+                        <span>Table booking</span>
+                        <span>₹12000 for two</span>
+                        <span>5 km</span>
+                    </div>
+                    <p class="restaurant-offers">Up to 10% off with bank offers</p>
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <div class="restaurant-image" style="background-image: url('https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');">
+                    <span class="new-badge">1 new</span>
+                    <span class="rating">4.3 ★</span>
+                </div>
+                <div class="restaurant-content">
+                    <h3 class="restaurant-name">From The North</h3>
+                    <p class="restaurant-cuisine">Continental + North Indian</p>
+                    <p class="restaurant-location">Ennexid Building, Navarangpara...</p>
+                    <div class="restaurant-details">
+                        <span>Table booking</span>
+                        <span>₹12000 for two</span>
+                        <span>3.3 km</span>
+                    </div>
+                    <p class="restaurant-offers">Up to 10% off with bank offers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grocery Section -->
+    <section class="grocery">
+        <h2 class="section-title">Shop groceries on Instamart</h2>
+        <div class="grocery-grid">
+            <div class="grocery-card">
+                <div class="grocery-image" style="background-image: url('https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Fresh Vegetables</p>
+            </div>
+            <div class="grocery-card">
+                <div class="grocery-image" style="background-image: url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Fresh Fruits</p>
+            </div>
+            <div class="grocery-card">
+                <div class="grocery-image" style="background-image: url('https://images.unsplash.com/photo-1550583727-9d4fba30e51b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Dairy, Bread and Eggs</p>
+            </div>
+            <div class="grocery-card">
+                <div class="grocery-image" style="background-image: url('https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Rice, Atta and Dals</p>
+            </div>
+            <div class="grocery-card">
+                <div class="grocery-image" style="background-image: url('https://images.unsplash.com/photo-1603272995595-07f5e6ff8d04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Masalas and Dry Fruits</p>
+            </div>
+            <div class="grocery-card">
+                <div class="grocery-image" style="background-image: url('https://images.unsplash.com/photo-1532509774891-141d37f25ae9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Oils and Ghee</p>
+            </div>
+            <div class="grocery-card">
+                <div class="grocery-image" style="background-image: url('https://images.unsplash.com/photo-1558961367-f4ba6c1e8086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <p>Munchies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section class="cities">
+        <h2 class="section-title">Cities with food delivery</h2>
+        <div class="cities-list">
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Bangalore</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Gurgaon</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Hyderabad</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Delhi</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Chennai</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Ahmedabad</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Chandigarh</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Jaipur</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Mumbai</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Pune</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Kolkata</div>
+            <div class="city-item"><i class="fas fa-chevron-right"></i>Order food online in Kochi</div>
+        </div>
+        <div class="show-more">
+            <button>Show More</button>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section class="app-download">
+        <div class="app-content">
+            <h2>Get the Swiggy App now!</h2>
+            <p>For best offers and discounts curated specially for you.</p>
+            <div class="qr-code">
+                <span>QR Code</span>
+            </div>
+            <p>Scan to download</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Swiggy Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Partner with us</a></li>
+                    <li><a href="#">Ride with us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Refund & Cancellation</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>We deliver to</h3>
+                <ul>
+                    <li><a href="#">Bangalore</a></li>
+                    <li><a href="#">Gurgaon</a></li>
+                    <li><a href="#">Hyderabad</a></li>
+                    <li><a href="#">Delhi</a></li>
+                    <li><a href="#">Mumbai</a></li>
+                    <li><a href="#">Pune</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Swiggy Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart" id="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <p>Add some delicious food!</p>
+            </div>
+        </div>
+        <div class="cart-total" id="cart-total" style="display: none;">
+            <span>Total:</span>
+            <span id="total-amount">₹0</span>
+        </div>
+        <button class="checkout-btn" id="checkout-btn" style="display: none;">Proceed to Checkout</button>
+    </div>
+
+    <!-- Location Modal -->
+    <div class="location-modal" id="location-modal">
+        <div class="modal-header">
+            <h2>Enter Delivery Address</h2>
+            <button class="close-modal" id="close-location-modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-content">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="address">Complete Address</label>
+                <textarea id="address" placeholder="Enter your complete address with landmark"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter your city">
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" placeholder="Enter pincode">
+            </div>
+            <div class="form-actions">
+                <button class="cancel-btn" id="cancel-location">Cancel</button>
+                <button class="save-btn" id="save-location">Save Address</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="modal-header">
+            <h2>Checkout</h2>
+            <button class="close-modal" id="close-checkout-modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-content">
+            <div class="form-group">
+                <label>Delivery Address</label>
+                <div id="delivery-address-display" style="padding: 12px; background-color: #f9f9f9; border-radius: 6px; margin-top: 8px;">
+                    No address selected
+                </div>
+                <button class="change-address-btn" id="change-address-btn" style="margin-top: 10px; background: none; border: 1px solid #fc8019; color: #fc8019; padding: 8px 15px; border-radius: 4px; cursor: pointer;">Change Address</button>
+            </div>
+            
+            <div class="form-group">
+                <label>Payment Method</label>
+                <div class="payment-options">
+                    <div class="payment-option" data-method="cod">
+                        <input type="radio" id="cod" name="payment" value="cod">
+                        <label for="cod">Cash on Delivery</label>
+                    </div>
+                    <div class="payment-option" data-method="card">
+                        <input type="radio" id="card" name="payment" value="card">
+                        <label for="card">Credit/Debit Card</label>
+                    </div>
+                    <div class="payment-option" data-method="upi">
+                        <input type="radio" id="upi" name="payment" value="upi">
+                        <label for="upi">UPI Payment</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-details" id="card-details">
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" placeholder="Enter name as on card">
+                </div>
+            </div>
+            
+            <div class="payment-details" id="upi-details">
+                <div class="form-group">
+                    <label for="upi-id">UPI ID</label>
+                    <input type="text" id="upi-id" placeholder="yourname@upi">
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button class="cancel-btn" id="cancel-checkout">Cancel</button>
+                <button class="save-btn" id="place-order">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="success-modal" id="success-modal">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Order Placed Successfully!</h2>
+        <p>Your order will be delivered soon. Thank you for choosing Swiggy!</p>
+        <button class="success-btn" id="success-ok">OK</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+   
+</body>
+</html>
